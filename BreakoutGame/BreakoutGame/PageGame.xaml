@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BreakoutGame.PageGame" 
+             x:Name="contentPageBackground"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="Fill">
+            <StackLayout VerticalOptions="CenterAndExpand" IsVisible="true" x:Name="btnCommencer">
+                <Button Text="Commencer" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large" BorderWidth="1.5" BorderColor="Red" BackgroundColor="Transparent" CornerRadius="20" TextColor="Red" Clicked="Button_Clicked"/>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="FillAndExpand" IsVisible="false" x:Name="gameStacklayout">
+                <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween">
+                    <Button Text="level : 1" x:Name="btnLevel" BackgroundColor="Gray" BorderColor="Black" BorderWidth="1.5" TextColor="Wheat" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" CornerRadius="10" />
+                    <StackLayout Orientation="Horizontal" HeightRequest="20" Margin="5">
+                        <Image Source="heart.png" x:Name="heart1" WidthRequest="20"/>
+                        <Image Source="heart.png" x:Name="heart2" WidthRequest="20"/>
+                        <Image Source="heart.png" x:Name="heart3" WidthRequest="20"/>
+                        <Image Source="heart.png" x:Name="heart4" WidthRequest="20"/>
+
+                    </StackLayout>
+                </FlexLayout>
+
+                <AbsoluteLayout x:Name="gameArea"  VerticalOptions="FillAndExpand" >
+                    <Label AbsoluteLayout.LayoutFlags="All" Text="4" AbsoluteLayout.LayoutBounds="0.5,0.6,1,0.2" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" x:Name="lblCount" FontSize="60" BackgroundColor="Beige"/>
+                </AbsoluteLayout>
+
+                <StackLayout>
+                    <Slider x:Name="sliderPadding" Minimum="0" Maximum="1" Value="0.5" ValueChanged="Slider_ValueChanged" HorizontalOptions="Fill" 
+                        MinimumTrackColor="White" MaximumTrackColor="White" ThumbImageSource="iconSlider.png" ThumbColor="Black"/>
+                    <Label Text="@kigames" HorizontalOptions="Center" TextColor="White"/>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

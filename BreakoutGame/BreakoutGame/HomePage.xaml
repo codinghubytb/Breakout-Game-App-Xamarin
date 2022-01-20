@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BreakoutGame.HomePage"
+             BackgroundImageSource="bg.jpg"
+             NavigationPage.HasNavigationBar = "false">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="Fill">
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0.2,1,0.2">
+                <Image Source="title.png"/>
+            </StackLayout>
+            <ImageButton x:Name="imgTitle" Clicked="Button_Clicked"  Source="btnPlay.png" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0.7,1,0.3"
+                         HorizontalOptions="Center" BackgroundColor="Transparent" CornerRadius="20"/>
+            <Label Text="@kigames" HorizontalOptions="Center" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,1,1,0.04"/>   
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
